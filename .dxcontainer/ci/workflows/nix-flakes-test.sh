@@ -40,6 +40,7 @@ nixflks_test__exit_code() {
 
 test__s6-cli() {
     nixflks_test__exit_code "pkgs/s6-cli" nix run .#s6-cli
+    nixflks_test__exit_code "pkgs/bashbrew" nix run .#bashbrew
 }
 
 # ─────────────────────────────────────────────────────────────

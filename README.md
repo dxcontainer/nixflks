@@ -21,6 +21,13 @@ The following packages are available for use.
   <tbody>
     <tr>
       <td>
+        <strong><code>bashbrew</code></strong>
+      </td>
+      <td>Canonical parsing tool for the official Docker images library files.</td>
+      <td><code>pkgs/bashbrew</code></td>
+    </tr>
+    <tr>
+      <td>
         <strong><code>s6-cli</code></strong>
       </td>
       <td>A CLI for managing <code>s6-overlay</code> services.</td>
@@ -41,6 +48,12 @@ The following packages are available for use.
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>
+        <strong><code>bashbrew</code></strong>
+      </td>
+      <td><code>nix run github:dxcontainer/nixflks#bashbrew -- --version</code></td>
+    </tr>
     <tr>
       <td>
         <strong><code>s6-cli</code></strong>

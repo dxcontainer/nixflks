@@ -6,6 +6,11 @@
       url = "github:NixOS/nixpkgs/nixos-unstable";
     };
 
+    bashbrew-flake = {
+      url = "./pkgs/bashbrew";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     s6-cli-flake = {
       url = "./pkgs/s6-cli";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,6 +21,7 @@
     {
       nixpkgs,
       s6-cli-flake,
+      bashbrew-flake,
       ...
     }:
     let
@@ -70,6 +76,7 @@
         };
 
         # Packages [Flakes]
+        bashbrew = bashbrew-flake.packages.${system}.bashbrew;
         s6-cli = s6-cli-flake.packages.${system}.s6-cli;
       });
     };

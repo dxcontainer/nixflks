@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "bashbrew-flake": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./pkgs/bashbrew",
+        "type": "path"
+      },
+      "original": {
+        "path": "./pkgs/bashbrew",
+        "type": "path"
+      },
+      "parent": []
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1755615617,
@@ -18,6 +34,7 @@
     },
     "root": {
       "inputs": {
+        "bashbrew-flake": "bashbrew-flake",
         "nixpkgs": "nixpkgs",
         "s6-cli-flake": "s6-cli-flake"
       }
